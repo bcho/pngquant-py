@@ -1,0 +1,32 @@
+# pngquant-py
+
+[WIP]
+
+Export some handful interfaces for using [pngquant](https://github.com/pornel/pngquant) in Python via [cffi](http://cffi.readthedocs.org).
+
+
+## pngquant.tiny
+
+Compress png image and reduce its size.
+
+
+### Usage
+
+```python
+from pngquant import tiny
+
+# .. get origin image's width & height
+
+with open('origin.png', 'rb') as origin:
+    rv = tiny(origin.read(), origin_img_width, origin_img_height)
+    with open('compressed.png', 'wb') as compressed:
+        compressed.write(rv)
+```
+
+
+## TODO
+
+- [?] Add setup informations.
+- [?] Add some testcases.
+- [?] Clear some code todos.
+- [?] Add options for interfaces.
